@@ -2,8 +2,7 @@
 Booleans b;
 Player p;
 
-void setup() {
-  background(72,25,210);
+void setup() {  
   b = new Booleans();
   p = new Player();
   fullScreen();
@@ -12,6 +11,9 @@ void setup() {
 
 
 void draw() {
+  background(72, 25, 210);
+  p.movement();
+  b.booleans();
 }
 
 void keyPressed() {
