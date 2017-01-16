@@ -3,6 +3,11 @@ class Player {
   float y = 490;
   
   void movement(){
-  rect(x, y, 30, 30);
+    pushStyle();
+    noStroke();
+    fill(0,0,0,0);
+  rect(x, y, 14, 20);
+  popStyle();
+ 
   }
 }
