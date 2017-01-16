@@ -9,12 +9,16 @@ class Booleans {
 
   void booleans() {
     if (W == true) {
+      p.y -= Yspeed;
     }
     if (S == true) {
+      p.y += Yspeed;
     }
     if (A == true) {
+      p.x -= Xspeed;
     }
     if (D == true) {
+      p.x += Xspeed;
     }
   }
 }
