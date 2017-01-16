@@ -32,12 +32,18 @@ void setup() {
   Down = loadImage("down.png");
   Left = loadImage("left.png");
   Right = loadImage("right.png");
-  background = loadImage("Baggrund.png");
+  background = loadImage("Etage_3_med_døre_1.0.png");
+  Setup();
 }
 
 
 
 void draw() {
+  for (Wall temp : walls) {
+    temp.drawWall();
+    temp.drawDoor();
+  }
+  
   background(255);
 
   pushMatrix();
