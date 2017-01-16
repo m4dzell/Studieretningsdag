@@ -5,11 +5,14 @@ PImage Right;
 String message = "Find lokalet";
 float mapW;
 float menuW;
+float pictureX = 0;
+float pictureY = 0;
 
 float m = 0;
 float h = 0;
 
 PImage mobile;
+PImage background;
 
 
 
@@ -29,12 +32,19 @@ void setup() {
   Down = loadImage("down.png");
   Left = loadImage("left.png");
   Right = loadImage("right.png");
+  background = loadImage("Baggrund.png");
 }
 
 
 
 void draw() {
   background(255);
+
+  pushMatrix();
+  translate(mapW/2, height/2);
+  scale(3);
+  image(background,pictureX-1334/2,pictureY-500);
+  popMatrix();
 
   // Header
   fill(0);
