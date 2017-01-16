@@ -16,6 +16,10 @@ PImage mobile;
 Booleans b = new Booleans();
 Player p = new Player();
 Clock c = new Clock();
+//Room r = new Room();
+//Wall w = new Wall();
+
+
 void setup() {  
   size(1300, 700);
   mapW = width/1.5;
@@ -47,10 +51,12 @@ void draw() {
   m += 0.1;
   h += 0.1/60;
 
-  noFill();
+  noFill();  
   c.clock(mapW+menuW/2, height/3, h, m, 200);
   p.movement();
   b.booleans();
+  //r.drawRoom();
+  //w.drawWall();
 }
 
 void keyPressed() {
