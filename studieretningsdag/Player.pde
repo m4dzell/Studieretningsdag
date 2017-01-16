@@ -1,6 +1,6 @@
 class Player {
-  float x = 490;
-  float y = 490;
+  float x = 200;
+  float y = 110;
   
   void movement(){
     pushStyle();

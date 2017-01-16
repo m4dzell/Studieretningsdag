@@ -32,25 +32,28 @@ void setup() {
   Down = loadImage("down.png");
   Left = loadImage("left.png");
   Right = loadImage("right.png");
-  background = loadImage("Etage_3_med_døre_1.0.png");
+  background = loadImage("Baggrund.png");
   Setup();
 }
 
 
 
 void draw() {
-  for (Wall temp : walls) {
-    temp.drawWall();
-    temp.drawDoor();
-  }
-  
+  float prevX = p.x;
+  float prevY = p.y;
+
+  //println("PlayerX: " + (mapW/2-pictureX-1334/2) + "      " + (pictureX-1334/2-mapW/2));
+
+
   background(255);
 
-  pushMatrix();
-  translate(mapW/2, height/2);
-  scale(3);
-  image(background,pictureX-1334/2,pictureY-500);
-  popMatrix();
+  /*pushMatrix();
+   translate(mapW/2, height/2);
+   scale(1);
+   image(background, pictureX-1334/2, pictureY-500);
+   popMatrix();*/
+
+  //image(background, 0, 0);
 
   // Header
   fill(0);
@@ -59,20 +62,32 @@ void draw() {
   text(message, mapW/2, 30);
 
   //menu
-  stroke(0);
-  strokeWeight(5);
+  //stroke(0);
+  //strokeWeight(5);
 
-  image(mobile, mapW, 0, menuW, height);
+  //image(mobile, mapW, 0, menuW, height);
 
   m += 0.1;
   h += 0.1/60;
 
   noFill();  
-  c.clock(mapW+menuW/2, height/3, h, m, 200);
+  c.clock(800, 300, h, m, 200);
   p.movement();
   b.booleans();
   //r.drawRoom();
   //w.drawWall();
+
+
+  for (Wall temp : walls) {
+    temp.drawWall();
+    temp.drawDoor();
+
+    if (temp.collisionDetection(p.x, p.y, 5))
+    {
+      p.x = prevX;
+      p.y = prevY;
+    }
+  }
 }
 
 void keyPressed() {

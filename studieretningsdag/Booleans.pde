@@ -10,24 +10,28 @@ class Booleans {
   
   void booleans() {
     if (W == true) {
-      image(Up,p.x,p.y);
-      pictureY += Yspeed;
+      p.y -= Yspeed;
+      image(Up,p.x,p.y-10);
+      //pictureY += Yspeed;
     }
     if (S == true) {
-      image(Down,p.x,p.y);
-      pictureY -= Yspeed;
+      p.y += Yspeed;
+      image(Down,p.x,p.y-10);
+      //pictureY -= Yspeed;
     }
     if (A == true) {
-      image(Left,p.x,p.y);
-      pictureX += Xspeed;
+      p.x -= Xspeed;
+      image(Left,p.x,p.y-10);
+      //pictureX += Xspeed;
     }
     if (D == true) {
-      image(Right,p.x,p.y);
-      pictureX -= Xspeed;
+      p.x += Xspeed;
+      image(Right,p.x,p.y-10);
+      //pictureX -= Xspeed;
     }
     if(!W && !S && !A && !D)
     {
-      image(Down,p.x,p.y);
+      image(Down,p.x,p.y-10);
     }
   }
 }
