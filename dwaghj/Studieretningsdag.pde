@@ -1,10 +1,8 @@
 
-Booleans b;
-Player p;
+Booleans b = new Booleans();
+Player p = new Player();
 
 void setup() {  
-  b = new Booleans();
-  p = new Player();
   fullScreen();
 }
 
