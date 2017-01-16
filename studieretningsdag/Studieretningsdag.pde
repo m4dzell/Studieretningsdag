@@ -2,7 +2,7 @@ PImage Up;
 PImage Down;
 PImage Left;
 PImage Right;
-String message = "Find lokalet";
+String message = "Skemaspil";
 float mapW;
 float menuW;
 float pictureX = 0;
@@ -71,7 +71,7 @@ void draw() {
   h += 0.1/60;
 
   noFill();  
-  c.clock(800, 300, h, m, 200);
+  c.clock(800, 300, 9, 25, 200);
   p.movement();
   b.booleans();
   //r.drawRoom();

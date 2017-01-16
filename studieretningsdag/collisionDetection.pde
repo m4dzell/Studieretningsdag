@@ -19,7 +19,7 @@ void Setup() {
   walls.add(new Wall(384, 208, 115, 5, 0));
   walls.add(new Wall(383, 208, 5, 81));
   walls.add(new Wall(490, 208, 5, 81));
-  walls.add(new Wall(325, 142, 187, 5));
+  walls.add(new Wall(325, 142, 180, 5));
   walls.add(new Wall(530, 142, 528, 5));
   walls.add(new Wall(483, 98, 75, 5, 0));
   walls.add(new Wall(557, 36, 5, 67));  
@@ -32,10 +32,12 @@ void Setup() {
   walls.add(new Wall(999, 36, 5, 90));
   walls.add(new Wall(779, 119, 112, 5, 0));
   walls.add(new Wall(889, 119, 112, 5, 0));
-  walls.add(new Wall(1053, 24, 5, 615));
+
+  walls.add(new Wall(1053, 24, 5, 130, 1));
+  walls.add(new Wall(1053, 146, 5, 492));
   walls.add(new Wall(1207, 24, 5, 615));
   walls.add(new Wall(1053, 24, 160, 5));
-  walls.add(new Wall(1053, 630, 160, 5));
+  walls.add(new Wall(1053, 632, 160, 5));
   walls.add(new Wall(1117, 24, 5, 97));
   walls.add(new Wall(1117, 115, 95, 5, 0));
   walls.add(new Wall(1119, 248, 5, 80, 1));
