@@ -101,7 +101,8 @@ class Wall {
   
   // Til debugging
   void drawDoor() {
-    fill(255, 0, 0);
+    fill(255);
+    noStroke();
     rect(doorX, doorY, 10, 10);
   }
 

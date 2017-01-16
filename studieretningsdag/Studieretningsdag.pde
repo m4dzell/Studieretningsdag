@@ -14,6 +14,11 @@ float h = 0;
 PImage mobile;
 PImage background;
 
+int lokale1;
+int lokale2;
+int lokale3;
+int lokale4;
+int lokale5;
 
 
 Booleans b = new Booleans();
@@ -34,6 +39,12 @@ void setup() {
   Right = loadImage("right.png");
   background = loadImage("Baggrund.png");
   Setup();
+  lokale1 = int(random(14));
+  lokale2 = int(random(14));
+  lokale3 = int(random(14));
+  lokale4 = int(random(14));
+  lokale5 = int(random(14));
+  Setup2();
 }
 
 
@@ -65,13 +76,13 @@ void draw() {
   //stroke(0);
   //strokeWeight(5);
 
-  //image(mobile, mapW, 0, menuW, height);
+  image(mobile, 0, 300, 800, 400);
 
   m += 0.1;
   h += 0.1/60;
 
   noFill();  
-  c.clock(800, 300, 9, 25, 200);
+  c.clock(575, 500, 9, 25, 150);
   p.movement();
   b.booleans();
   //r.drawRoom();
@@ -86,6 +97,14 @@ void draw() {
     {
       p.x = prevX;
       p.y = prevY;
+    }
+  }
+  
+  for (Room temp : rooms) {
+    //temp.drawRoom();
+    if(true)
+    {
+      println(temp.getRoomNumber());
     }
   }
 }
